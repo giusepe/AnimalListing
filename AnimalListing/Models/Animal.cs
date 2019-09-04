@@ -7,5 +7,6 @@ namespace AnimalListing.Models
         public string Location { get; set; }
         public string Details { get; set; }
         public string ImageUrl { get; set; }
+        public string AnimalGroupName { get; set; }
     }
 }
