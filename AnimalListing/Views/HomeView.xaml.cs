@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using AnimalListing.ViewModels;
+﻿using AnimalListing.ViewModels;
+using ReactiveUI;
 using ReactiveUI.XamForms;
-using Xamarin.Forms;
 
 namespace AnimalListing.Views
 {
@@ -11,6 +9,11 @@ namespace AnimalListing.Views
         public HomeView()
         {
             InitializeComponent();
+
+            this.WhenActivated(disposables =>
+            {
+                this.OneWayBind(ViewModel, vm => vm.Animals, v => v.AnimalsCollection.ItemsSource);
+            });
         }
     }
 }

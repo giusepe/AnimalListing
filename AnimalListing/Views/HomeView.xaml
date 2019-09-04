@@ -9,7 +9,7 @@
 
     <ContentPage.Content>
         <StackLayout Margin="20">
-            <CollectionView ItemsSource="{Binding Animals}"
+            <CollectionView x:Name="AnimalsCollection"
                             IsGrouped="true">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
